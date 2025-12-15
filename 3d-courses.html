@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Courses Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            perspective: 1200px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.85;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .course-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+            border-radius: 16px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: rotateY(12deg) rotateX(6deg) translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+        }
+
+        .course-card h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            transform: translateZ(40px);
+        }
+
+        .course-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            transform: translateZ(25px);
+        }
+
+        .tags {
+            margin-top: 12px;
+            transform: translateZ(30px);
+        }
+
+        .tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 4px 6px 0 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 22px;
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+            color: #000;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transform: translateZ(50px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateZ(60px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>3D Learning Courses</h1>
+    <p>Interactive motion-based course selection experience</p>
+</header>
+
+<div class="container">
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h2>Web Development</h2>
+            <p>Build modern and responsive websites using HTML and CSS fundamentals.</p>
+            <div class="tags">
+                <span>6 Months</span><span>Beginner</span>
+            </div>
+            <a class="btn" href="https://alison.com/course/web-development-with-html-and-css-for-beginners" target="_blank">Enroll</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Artificial Intelligence</h2>
+            <p>Master generative AI concepts and real-world applied intelligence systems.</p>
+            <div class="tags">
+                <span>8 Months</span><span>Intermediate</span>
+            </div>
+            <a class="btn" href="https://alison.com/course/diploma-in-applied-generative-ai" target="_blank">Enroll</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Data Science</h2>
+            <p>Analyze, visualize, and interpret data using Python and statistics.</p>
+            <div class="tags">
+                <span>7 Months</span><span>Intermediate</span>
+            </div>
+            <a class="btn" href="https://alison.com/course/diploma-in-using-python-for-data-science" target="_blank">Enroll</a>
+        </div>
+
+        <div class="course-card">
+            <h2>Cyber Security</h2>
+            <p>Protect systems and networks through ethical hacking and defense skills.</p>
+            <div class="tags">
+                <span>5 Months</span><span>Advanced</span>
+            </div>
+            <a class="btn" href="https://alison.com/course/diploma-in-cyber-security" target="_blank">Enroll</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2025 3D Courses Portal | Interactive Web Experience
+</footer>
+
+</body>
+</html>
